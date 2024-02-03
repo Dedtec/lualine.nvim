@@ -2,13 +2,22 @@
 -- MIT license, see LICENSE for more details.
 
 local function toggleterm_statusline()
-  return 'ToggleTerm #' .. vim.b.toggle_number
+  local term = require("toggleterm.terminal").get(vim.b.toggle_number, true)
+  if term.display_name ~= nil then
+    return term.display_name
+  else
+    return 'Terminal #' .. vim.b.toggle_number
+  end
+
 end
 
 local M = {}
 
 M.sections = {
-  lualine_a = { toggleterm_statusline },
+  lualine_b = {{
+    toggleterm_statusline,
+    separator = { left = '', right = '' }
+  }},
 }
 
 M.filetypes = { 'toggleterm' }

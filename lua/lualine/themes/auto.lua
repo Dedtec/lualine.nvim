@@ -108,14 +108,14 @@ end
 -- Get the colors to create theme
 -- stylua: ignore
 local colors = {
-  normal  = utils.extract_color_from_hllist('bg', { 'PmenuSel', 'PmenuThumb', 'TabLineSel' }, '#000000'),
-  insert  = utils.extract_color_from_hllist('fg', { 'String', 'MoreMsg' }, '#000000'),
-  replace = utils.extract_color_from_hllist('fg', { 'Number', 'Type' }, '#000000'),
-  visual  = utils.extract_color_from_hllist('fg', { 'Special', 'Boolean', 'Constant' }, '#000000'),
-  command = utils.extract_color_from_hllist('fg', { 'Identifier' }, '#000000'),
-  back1   = utils.extract_color_from_hllist('bg', { 'Normal', 'StatusLineNC' }, '#000000'),
-  fore    = utils.extract_color_from_hllist('fg', { 'Normal', 'StatusLine' }, '#000000'),
-  back2   = utils.extract_color_from_hllist('bg', { 'StatusLine' }, '#000000'),
+  normal  = utils.extract_color_from_hllist('bg', { 'PmenuSel', 'PmenuThumb', 'TabLineSel' }, 'none'),
+  insert  = utils.extract_color_from_hllist('fg', { 'String', 'MoreMsg' }, 'none'),
+  replace = utils.extract_color_from_hllist('fg', { 'Number', 'Type' }, 'none'),
+  visual  = utils.extract_color_from_hllist('fg', { 'Special', 'Boolean', 'Constant' }, 'none'),
+  command = utils.extract_color_from_hllist('fg', { 'Identifier' }, 'none'),
+  back1   = utils.extract_color_from_hllist('bg', { 'Normal', 'StatusLineNC' }, 'none'),
+  fore    = utils.extract_color_from_hllist('fg', { 'Normal', 'StatusLine' }, 'none'),
+  back2   = utils.extract_color_from_hllist('bg', { 'StatusLine' }, 'none'),
 }
 
 -- Change brightness of colors
