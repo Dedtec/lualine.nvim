@@ -113,7 +113,7 @@ M.update_status = function(self)
     table.insert(symbols, self.options.symbols.newfile)
   end
 
-  if vim.bo.filetype == 'alpha' or vim.bo.filetype == 'NvimTree' then
+  if vim.bo.filetype == 'alpha' or vim.bo.filetype == 'NvimTree' or vim.bo.filetype == 'oil' then
     return ''
   else
     return data .. (#symbols > 0 and ' ' .. table.concat(symbols, '') or '')
